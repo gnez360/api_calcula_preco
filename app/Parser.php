@@ -63,7 +63,7 @@ class Parser extends Model {
     public function setPriceTax()
     {
         $tax = $this->tax;
-        return (float)$this->product->price * (float)$tax;
+        return (float)$this->product->price * (float)$tax * $this->dolar;
     }
 
     public function setValue(){
